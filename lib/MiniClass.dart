@@ -34,7 +34,7 @@ class CustomButton extends StatelessWidget {
             onPressed: () => onPressed(),
             child: Text(
               title,
-              style: TextStyle(color: textColor, fontSize: 20),
+              style: TextStyle(color: textColor, fontSize: 20,),
             )),
       ),
     ]);
@@ -111,4 +111,16 @@ class DialogBottom {
       context: context,
     );
   }
+}
+  Map<int, String> weekDayName = {
+    0: 'شنبه',
+    1: 'یک شنبه',
+    2: 'دو  شنبه',
+    3: 'سه شنبه',
+    4: 'چهار شنبه',
+    5: 'پنج شنبه',
+    6: 'جمعه'
+  };
+class WeekDayName {
+
 }

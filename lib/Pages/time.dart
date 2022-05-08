@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
     DateTime now = DateTime.now();
     DateTime date = DateTime(now.year, now.month, now.day);
     Jalali j1 = now.toJalali();
-    print(' $j1');
+    // print(' $j1');
     return Scaffold(
       body: Column(
         children: [

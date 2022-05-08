@@ -92,6 +92,7 @@ class _LoginState extends State<Login> {
             ),
             /*Button*/ Opacity(
               opacity: counterNumber == true ? 1 : 0.5,
+              
               child: CustomButton(
                 title: 'ارسال',
                 color: Colors.blue,

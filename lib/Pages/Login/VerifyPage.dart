@@ -237,10 +237,6 @@ class _VerifyPageState extends State<VerifyPage> {
                       ),
                     );
                   }
-
-                  // UserInformation.setMobile(
-                  //     context, widget.phoneNumber.toString());
-                  // UserInformation.setToken(context, verifycode.toString());
                 } else {
                   setState(() {
                     DialogBottom.show(context);

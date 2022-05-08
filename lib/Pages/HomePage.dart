@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:reminder/MiniClass.dart';
 import 'package:shamsi_date/shamsi_date.dart';
 
 class HomePage extends StatefulWidget {
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
     DateTime now = DateTime.now();
     DateTime date = DateTime(now.year, now.month, now.day);
     Jalali j1 = now.toJalali();
-    print(' $j1');
+    // print(' $j1');
     return Scaffold(
       body: Column(
         children: [
@@ -37,7 +38,7 @@ class _HomePageState extends State<HomePage> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Text('  ${j1.weekDay}'),
+          Text('${weekDayName[j1.weekDay]}'),
           Text(
             '  ${j1.second}',
             style: TextStyle(
