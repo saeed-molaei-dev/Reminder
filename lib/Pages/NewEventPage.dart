@@ -8,34 +8,94 @@ class NewEventPage extends StatefulWidget {
 }
 
 class _NewEventPageState extends State<NewEventPage> {
+  var EventName = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.white,
-          toolbarHeight: 50,
-          leading: IconButton(
-            icon: const Icon(
-              Icons.close,
-              color: Colors.black87,
+        elevation: 1,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              icon: const Icon(
+                Icons.close,
+                color: Colors.black87,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
             ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-            tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
-          )),
-      body: Column(
-        children: [
-          Container(
-            child: Text('fild 1'),
-          ),
-          Container(
-            child: Text('fild 2'),
-          ),
-          Container(
-            child: Text('دکمه ثبت'),
-          ),
-        ],
+            Center(
+              child: Text(
+                'رویداد جدید',
+                style: TextStyle(color: Colors.black),
+              ),
+            ),
+            Text('              ')
+          ],
+        ),
+        backgroundColor: Colors.white,
+        toolbarHeight: 50,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          children: [
+            Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.black),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        'نام رویداد',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 24),
+                      ),
+                    ],
+                  ),
+                  TextField(
+                    controller: EventName,
+                    // keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(1.0),
+                      ),
+                      hintText: 'مانند: جشن نوروز',
+
+                      // suffixIcon: Icon(Icons.airport_shuttle),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              child: TextField(
+                controller: EventName,
+                // keyboardType: TextInputType.number,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  hintText: 'مانند: جشن نوروز',
+
+                  labelText: "نام رویداد",
+                  // suffixIcon: Icon(Icons.airport_shuttle),
+                ),
+              ),
+            ),
+            Container(
+              child: Text('دکمه ثبت'),
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -40,8 +40,8 @@ class _RiminderState extends State<Riminder> {
       ),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        // child: Splash(),
-        child: NewEventPage(),
+        child: Splash(),
+        // child: NewEventPage(),
       ), /*finaly*/
     );
   }
