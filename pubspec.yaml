@@ -32,6 +32,7 @@ dependencies:
   provider: 
   http: 
   shared_preferences: 
+  numberpicker: 
   shamsi_date: 
   intl: 
 

@@ -4,13 +4,9 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:reminder/Pages/ComingSoon.dart';
 import 'package:reminder/Login/VerifyPage.dart';
 import 'package:reminder/MiniClass.dart';
 import 'package:reminder/Provider/MainProvider.dart';
-
-import 'dart:async';
-
 import 'package:reminder/UserInformation/UserInformation.dart';
 
 class Login extends StatefulWidget {
@@ -92,7 +88,6 @@ class _LoginState extends State<Login> {
             ),
             /*Button*/ Opacity(
               opacity: counterNumber == true ? 1 : 0.5,
-              
               child: CustomButton(
                 title: 'ارسال',
                 color: Colors.blue,
@@ -119,7 +114,8 @@ class _LoginState extends State<Login> {
 
                       UserInformation.setphoneNumber(
                           context, MainProvider.phoneNumber);
-                      UserInformation.setphoneToken(context, MainProvider.phoneToken);
+                      UserInformation.setphoneToken(
+                          context, MainProvider.phoneToken);
 
                       print('MainProvider.token: ${MainProvider.phoneToken}');
                       print('result: ${result}');

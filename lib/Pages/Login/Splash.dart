@@ -1,10 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
+ 
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:reminder/Pages/ComingSoon.dart';
+import 'package:provider/provider.dart'; 
 import 'package:reminder/Login/LoginPage.dart';
 import 'package:reminder/Pages/HomePage.dart';
 import 'package:reminder/Provider/MainProvider.dart';

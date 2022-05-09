@@ -9,6 +9,7 @@ import 'package:reminder/Pages/HomePage.dart';
 import 'package:reminder/Pages/Login/Splash.dart';
 import 'package:reminder/Pages/NewEventPage.dart';
 import 'package:reminder/Provider/MainProvider.dart';
+import 'package:numberpicker/numberpicker.dart';
 
 void main() {
   runApp(
@@ -40,8 +41,8 @@ class _RiminderState extends State<Riminder> {
       ),
       home: Directionality(
         textDirection: TextDirection.rtl,
-        child: Splash(),
-        // child: NewEventPage(),
+        // child: Splash(),
+        child: NewEventPage(),
       ), /*finaly*/
     );
   }

@@ -2,17 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:reminder/Pages/ComingSoon.dart';
 import 'package:reminder/MiniClass.dart';
 import 'package:reminder/Pages/HomePage.dart';
 import 'package:reminder/Provider/MainProvider.dart';
 import 'package:reminder/UserInformation/UserInformation.dart';
-
-import 'dart:async';
 import 'dart:convert';
-import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:reminder/Login/LoginPage.dart';
 import 'package:http/http.dart' as http;
 
 class VerifyPage extends StatefulWidget {
@@ -207,8 +201,8 @@ class _VerifyPageState extends State<VerifyPage> {
                     print(
                         'MainProvider.verifyToken: ${MainProvider.verifyToken}');
                     print('result: ${result}');
-                     UserInformation.setverifyToken(
-                          context, MainProvider.verifyToken);    
+                    UserInformation.setverifyToken(
+                        context, MainProvider.verifyToken);
                     Navigator.push(
                       context,
                       MaterialPageRoute(
